@@ -1,0 +1,3 @@
+https://github.com/italolverde/Estudos/blob/main/Comandos%20PSI
+---------------------------------------------------------------
+https://github.com/italolverde/Estudos/blob/main/sqlite%20com%20flask/app.py
