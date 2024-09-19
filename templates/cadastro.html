@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+    <form action="{{ url_for('cadastro') }}" method="post">
+        <h3>Cadastro</h3>
+        <label for="matricula">Matricula:</label>
+        <input type="text" required name="matricula">
+        
+        <label for="email">Email:</label>
+        <input type="email" required name="email">
+        
+        <label for="senha">Senha:</label>
+        <input type="password" required name="senha">
+        
+        <p>Já possui uma conta? <a href="{{ url_for('login') }}">Faça login</a></p>
+        <input type="submit" value="Cadastrar">
+    </form>
+{% endblock %}

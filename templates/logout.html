@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Logout
+{% endblock %}
+
+{% block conteudo %}
+    <h1>Quer mesmo sair?</h1>
+    <form action="{{ url_for('logout' ) }}" method="POST">
+        <button>Sim</button>
+    </form>
+    <form action="{{ url_for('inicial' ) }}">
+        <button>Não</button>
+    </form>
+{% endblock %}

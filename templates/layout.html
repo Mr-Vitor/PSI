@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} document {% endblock %}</title>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="nav">
+            <nav>
+                <a href="{{ url_for('exercicios')}}">Meus exercicios</a> 
+                <a href="{{ url_for('logout')}}">Sair</a>
+            </nav>
+        </div>
+
+        {% block conteudo %}
+            burrinho deixou sem conteudo!!
+        {% endblock %}
+
+    </div>
+</body>
+</html>

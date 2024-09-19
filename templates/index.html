@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Login{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <h1>Login page</h1>
+    <form action="{{url_for('login')}}" method="post">
+        <label for="matricula">Matricula:</label>
+        <input type="text" required name="matricula">
+
+        <label for="senha">Senha:</label>
+        <input type="password" required name="senha">
+        <p>Não possui conta ? <a href="{{url_for('cadastro')}}">Cadastre-se</a></p>
+        <input type="submit" value="enviar">
+    </form>
+    {% endblock %}
+</body>
+</html>

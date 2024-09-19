@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Meus Exercícios
+{% endblock %}
+
+{% block conteudo %}
+    <ul>
+        {%for exercicio in exercicios%}
+        <li>
+            <p>Nome: {{exercicio['nome']}} |  Descrição: {{exercicio['descricao']}}</p>
+            <form action="{{url_for('remove_exercicio', id=exercicio['id'])}}" method="POST">
+                <input type="submit" value="deletar">
+            </form>
+        </li>
+        {%endfor%}
+    </ul>
+
+    
+
+    <form action="{{url_for('exercicios')}}" method="POST">
+        <h2>Adicionar exercício</h2>
+
+        <label for="add_nome_exercicio">Nome do exercício:</label>
+        <input type="text" name="nome" placeholder="Nome do exercicio" required>
+
+        <label for="genero_exercicio">Descrição do exercício:</label>
+        <input type="text" name="descricao" placeholder="Descrição do exercicio" required>
+
+        <input type="submit" value="adicionar">
+    </form>
+
+{% endblock %}
